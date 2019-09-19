@@ -26,10 +26,15 @@ public class LibraryTest {
     @Test
     public void containsDuplicatesTrueTest() {
         int[] duplicateArr = {9, 7, 6, 10, 10};
-        assertFalse(
+        assertTrue(
                 Library.containsDuplicates(duplicateArr)
         );
 
+    }
+
+    @Test
+    public void doesNotContianCheck(){
+        Library.hashyMappy();
     }
 
 }
