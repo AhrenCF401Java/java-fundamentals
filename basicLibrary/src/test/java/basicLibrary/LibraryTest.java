@@ -32,4 +32,9 @@ public class LibraryTest {
 
     }
 
+    @Test
+    public void doesNotContianCheck(){
+        Library.hashyMappy();
+    }
+
 }
