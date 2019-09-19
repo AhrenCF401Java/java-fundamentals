@@ -7,8 +7,29 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+    @Test
+    public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+
+    @Test
+    public void rollTest() {
+        int[] rightAnswer = new int[6];
+        assertEquals(
+                "new array should look like this",
+                rightAnswer.length,
+                Library.roll(6).length
+        );
+    }
+
+    @Test
+    public void containsDuplicatesTrueTest() {
+        int[] duplicateArr = {9, 7, 6, 10, 10};
+        assertFalse(
+                Library.containsDuplicates(duplicateArr)
+        );
+
+    }
+
 }
