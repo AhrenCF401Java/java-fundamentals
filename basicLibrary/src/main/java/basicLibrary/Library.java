@@ -38,15 +38,9 @@ public class Library {
 //    public static
 //    public static
 
-    public static String hashyMappy(){
-        int high =0;
-        int low =200;
-        int[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
+    public static String hashyMappy(int[][] weeklyMonthTemperatures){
+        int high =Integer.MIN_VALUE;
+        int low =Integer.MAX_VALUE;
 
         HashSet<Integer> monthTemps = new HashSet<>();
 
@@ -55,40 +49,39 @@ public class Library {
                 monthTemps.add(weeklyMonthTemperatures[i][j]);
                  if( weeklyMonthTemperatures[i][j]>high){
                      high=weeklyMonthTemperatures[i][j];
-                 }else if (weeklyMonthTemperatures[i][j]<low){
+                 }
+                 if (weeklyMonthTemperatures[i][j]<low){
                      low=weeklyMonthTemperatures[i][j];
                  }
             }
         }
-        String tempNotSeen="";
+        StringBuilder tempNotSeen= new StringBuilder(String.format("high: %d\nLow: %d", low,high));
         for(int i=low; i<=high; i++){
             if(!monthTemps.contains(i))
-                tempNotSeen += String.format("Never saw temperature: %d",i);
+                tempNotSeen.append(String.format("\nNever saw temperature: %d",i));
         }
-        return tempNotSeen;
+
+        return tempNotSeen.toString();
     }
 
-    public static String tally(){
-        List<String> votes = new ArrayList<>();
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-        votes.add("Hedge");
-        votes.add("Bush");
-
+    public static String tally(List<String> votes){
         HashMap<String,Integer> plantVoteNumbers = new HashMap<>();
-        for(String plant: votes){
-            plantVoteNumbers.put(plant, 0);
+        for(String plant: votes) {
+
+            if (plantVoteNumbers.containsKey(plant)){
+                int previousPlantVotes= plantVoteNumbers.get(plant);
+                plantVoteNumbers.put(plant, previousPlantVotes + 1);
+            }else{
+                plantVoteNumbers.put(plant, 1);
+            }
         }
-
-        
-
-
-
+        String winnerPlant= votes.get(0);
+        for (String plant: plantVoteNumbers.keySet()){
+            if(plantVoteNumbers.get(plant) > plantVoteNumbers.get(winnerPlant)){
+                winnerPlant = plant;
+            }
+        }
+    return winnerPlant;
     }
 
 
