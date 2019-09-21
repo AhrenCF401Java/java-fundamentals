@@ -31,13 +31,43 @@ public class LibraryTest {
     public void containsDuplicatesTrueTest() {
         int[] duplicateArr = {9, 7, 6, 10, 10};
         assertTrue(
+                "The test should return True if arr contains duplicate",
                 Library.containsDuplicates(duplicateArr)
         );
+    }
+
+    @Test
+    public void ArrAvsTest(){
+        int[] testarr={1,2,3,4,5,6,7,8,9,10};
+        double act= Library.calcAvs(testarr);
+        assertEquals(
+                5.5,
+                act,
+                0
+                );
 
     }
 
     @Test
-    public void doesNotContianCheck(){
+    public void  arrArrLowAvTest(){
+        int[][] testarr = {
+                {5, 5, 5, 5, 5, 5, 5},
+                {6, 6, 6, 6, 6, 6, 6},
+                {2, 2, 2, 2, 2, 2, 2},
+        };
+        double act= Library.multiArrCalc(testarr);
+        assertEquals(
+                2,
+                act,
+                0
+        );
+
+
+
+    }
+
+    @Test
+    public void doesNotContianTest(){
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
