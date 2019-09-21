@@ -72,7 +72,7 @@ public class LibraryTest {
         votes.add("Bush");
 
         assertEquals(
-                "Should retrn plant withh highest votes",
+                "Should return plant with highest votes",
                         "Bush",
                 Library.tally(votes)
         );
