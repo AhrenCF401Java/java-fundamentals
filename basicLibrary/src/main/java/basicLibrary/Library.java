@@ -55,7 +55,7 @@ public class Library {
                  }
             }
         }
-        StringBuilder tempNotSeen= new StringBuilder(String.format("high: %d\nLow: %d", low,high));
+        StringBuilder tempNotSeen= new StringBuilder(String.format("High: %d\nLow: %d", high , low));
         for(int i=low; i<=high; i++){
             if(!monthTemps.contains(i))
                 tempNotSeen.append(String.format("\nNever saw temperature: %d",i));
