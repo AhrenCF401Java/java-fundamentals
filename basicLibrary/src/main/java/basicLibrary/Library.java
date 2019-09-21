@@ -35,8 +35,44 @@ public class Library {
         return false;
     }
 
-//    public static
-//    public static
+
+//    Calculating Averages
+//      Write a method that accepts an array of integers and calculates and returns the average of all the values in the array.
+    public static double calcAvs(int[] arr){
+//      local variables
+//        keeps track of the total of all elements in the array to be averaged
+        int totalOfArr=0;
+//      methods to get proper data
+        for(int el: arr) {
+            totalOfArr += el;
+        }
+//      return
+        return (double)totalOfArr/arr.length;
+    }
+
+
+//    Arrays of Arrays
+//      Given an array of arrays calculate the average value for each array and return the array with the lowest average.
+    public static double multiArrCalc(int[][] arr){
+//        local vars
+        double lowDub=Integer.MAX_VALUE;
+        double[] avOfArrsArr=new double[arr.length];
+//        methods
+//        loop through the array and get the total of each nestArr
+        for(int i=0; i<arr.length; i++){
+//           loop through nestArr and add the values together then put in an avOfArrsArr
+            avOfArrsArr[i]=calcAvs(arr[i]);
+            }
+//        gets the lowest average array value from avOfArrsArr
+        for(double el : avOfArrsArr){
+            if(el<lowDub){
+                lowDub=el;
+
+            }
+        }
+//        returns value of lowest average in the array array
+        return lowDub;
+    }
 
     public static String hashyMappy(int[][] weeklyMonthTemperatures){
         int high =Integer.MIN_VALUE;
