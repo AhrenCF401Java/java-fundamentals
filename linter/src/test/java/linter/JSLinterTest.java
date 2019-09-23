@@ -6,9 +6,15 @@ package linter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class JSLinterTest {
     @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
+        JSLinter classUnderTest = new JSLinter();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Test public void  lint(){
+
+        lint();
+
     }
 }

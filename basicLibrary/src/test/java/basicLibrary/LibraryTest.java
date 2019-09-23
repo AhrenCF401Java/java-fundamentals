@@ -5,6 +5,7 @@ package basicLibrary;
 
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -106,5 +107,11 @@ public class LibraryTest {
                         "Bush",
                 Library.tally(votes)
         );
+    }
+
+    @Test
+    public void linterTest() throws FileNotFoundException {
+        String path="../linter/src/main/resources/gates.js";
+        Library.linter(path);
     }
 }
