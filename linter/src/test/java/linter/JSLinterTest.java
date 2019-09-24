@@ -13,7 +13,6 @@ public class JSLinterTest {
     }
 
     @Test public void  lint(){
-
         lint();
 
     }
