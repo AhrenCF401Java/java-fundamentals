@@ -10,7 +10,7 @@ public class RestaurantTest {
 
    @Before
    public void setup(){
-       musashis = new Restaurant("Musashi's", 4,4 );
+       musashis = new Restaurant("Musashi's", 5,4 );
 
    }
 
@@ -34,6 +34,13 @@ public class RestaurantTest {
         assertEquals(1,
                 musashis.reviews.size()
        );
+    }
+
+    @Test
+    public void howManyStarsIsThisRestaurantReallyTest(){
+        Review llama = new Review(musashis, musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!");
+        musashis.addReview(new Review(musashis,2,musashis.dollars, "Not the worst not the best"));
+
     }
 
 

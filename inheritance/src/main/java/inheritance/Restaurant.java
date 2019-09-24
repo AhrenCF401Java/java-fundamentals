@@ -20,7 +20,11 @@ public class Restaurant {
     }
 
     public void howManyStarsIsThisRestaurantReally(){
-        reviews.forEach(review ->{int i=0; i= stars+i;} );
+        for(Review review : reviews) {
+            int totalStars =0;
+            totalStars = totalStars + review.stars;
+            this.stars= totalStars / reviews.size();
+        }
     }
 
     public String toString() {
