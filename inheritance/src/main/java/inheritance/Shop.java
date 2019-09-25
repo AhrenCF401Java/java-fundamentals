@@ -26,8 +26,7 @@ public class Shop implements ReviewableThings {
         for(Review review : reviews) {
             totalStars = totalStars + review.stars;
         }
-        Math.round(totalStars / reviews.size());
-    }
+        this.stars = totalStars / reviews.size();    }
 
     @Override
     public String toString(){

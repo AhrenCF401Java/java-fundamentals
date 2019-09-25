@@ -15,7 +15,7 @@ public class ShopTest {
     }
     @Test
     public void addReview() {
-        Review llama = new Review(target, target.stars,0,"Best sushi bowl EVER!!!");
+        Review llama = new Review(target, target.stars,"Best sushi bowl EVER!!!");
         target.addReview(llama);
         assertEquals(1,
                 target.reviews.size()
@@ -24,8 +24,8 @@ public class ShopTest {
 
     @Test
     public void howManyStarsIsThisReviewableThingReally() {
-        Review llama = new Review(target, target.stars, 0, "Best sushi bowl EVER!!!");
-        target.addReview(new Review(target,2,0, "Not the worst not the best"));
+        Review llama = new Review(target, target.stars, "Best sushi bowl EVER!!!");
+        target.addReview(new Review(target,2, "Not the worst not the best"));
 
     }
 

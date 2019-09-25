@@ -5,8 +5,11 @@ import java.util.LinkedList;
 public class Theater implements ReviewableThings{
     String name;
     double stars;
+
     LinkedList<Review> reviews = new LinkedList<>();
     LinkedList<Movie> movies = new LinkedList<>();
+
+
     @Override
     public void addReview(Review review) {
 //        add it to reviews list
@@ -23,7 +26,7 @@ public class Theater implements ReviewableThings{
         for(Review review : reviews) {
             totalStars = totalStars + review.stars;
         }
-        Math.round(totalStars / reviews.size());
+        this.stars = totalStars / reviews.size();
     }
 
 

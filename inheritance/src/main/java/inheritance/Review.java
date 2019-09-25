@@ -3,6 +3,7 @@ package inheritance;
 public class Review {
     double stars;
     int dollars;
+    String movie;
     String review;
     ReviewableThings businessName;
 
@@ -11,7 +12,20 @@ public class Review {
         this.stars = stars;
         this.dollars = dollars;
         this.review = review;
+    }
 
+    public Review( ReviewableThings businessName, double stars, String review){
+        this.businessName = businessName;
+        this.stars = stars;
+        this.review = review;
+    }
+
+    public Review( ReviewableThings businessName, double stars, int dollars, String review, String movie){
+        this.businessName = businessName;
+        this.stars = stars;
+        this.dollars = dollars;
+        this.review = review;
+        this.movie = movie;
     }
 
     public String toString(){
