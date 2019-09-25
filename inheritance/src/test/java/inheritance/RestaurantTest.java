@@ -14,10 +14,6 @@ public class RestaurantTest {
 
    }
 
-    @Test
-    public void makeRestaurant(){
-
-    }
 
     @Test
     public void toStringTest(){

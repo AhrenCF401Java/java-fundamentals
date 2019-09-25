@@ -28,7 +28,7 @@ public class  Restaurant implements ReviewableThings {
     @Override
 //  https://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places
 //  used above to learn how to round a double to certian # of decimal places
-    public void howManyStarsIsThisBusinessReally(){
+    public void howManyStarsIsThisReviewableThingReally(){
         double totalStars =0;
         for(Review review : reviews) {
             totalStars = totalStars + review.stars;

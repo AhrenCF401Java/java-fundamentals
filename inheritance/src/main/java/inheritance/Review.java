@@ -18,20 +18,4 @@ public class Review {
         String reviewData = String.format("Stars : %d\nExpense : %d out of 5\nReview: %s", stars,dollars,review);
         return reviewData;
     }
-
 }
-//    Node head;
-//}
-//
-//class Node{
-//    int value;
-//    Node next;
-//
-//    public Node{
-//
-//    }
-//
-//    public void insertHead(int value){
-//        Node head = new Node(value, this.head);
-//    }
-//        }

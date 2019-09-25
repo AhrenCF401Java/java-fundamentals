@@ -18,7 +18,7 @@ public class Theater implements ReviewableThings{
 
 
     @Override
-    public void howManyStarsIsThisBusinessReally() {
+    public void howManyStarsIsThisReviewableThingReally() {
         double totalStars =0;
         for(Review review : reviews) {
             totalStars = totalStars + review.stars;
