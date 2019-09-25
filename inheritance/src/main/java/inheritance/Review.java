@@ -1,13 +1,13 @@
 package inheritance;
 // this is my Node
 public class Review {
-    int stars;
+    double stars;
     int dollars;
     String review;
-    Restaurant restaurant;
+    ReviewableThings businessName;
 
-    public Review(Restaurant restaurant, int stars, int dollars, String review){
-        this.restaurant = restaurant;
+    public Review( ReviewableThings businessName, double stars, int dollars, String review){
+        this.businessName = businessName;
         this.stars = stars;
         this.dollars = dollars;
         this.review = review;

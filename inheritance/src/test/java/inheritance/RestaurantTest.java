@@ -22,7 +22,7 @@ public class RestaurantTest {
     @Test
     public void toStringTest(){
         assertEquals(
-                "Restaurant:\nMusashi's\n4 Stars\n4",
+                "Restaurant:\nMusashi's\n5.0 Stars\n4",
                 musashis.toString()
         );
     }
@@ -37,7 +37,7 @@ public class RestaurantTest {
     }
 
     @Test
-    public void howManyStarsIsThisRestaurantReallyTest(){
+    public void howManyStarsIsThisBusinessReallyTest(){
         Review llama = new Review(musashis, musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!");
         musashis.addReview(new Review(musashis,2,musashis.dollars, "Not the worst not the best"));
 
