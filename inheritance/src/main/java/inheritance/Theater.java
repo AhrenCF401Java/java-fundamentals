@@ -10,8 +10,18 @@ public class Theater implements ReviewableThings{
     LinkedList<Movie> movies = new LinkedList<>();
 
 
+    public void addMovie(String title, String Genre, String rating, double length){
+        Movie movie= new Movie();
+    }
+
+    public void removeMovie(String title){
+        this.movies.remove(title);
+    }
+
+
+
     @Override
-    public void addReview(Review review) {
+    public void addReview(Review review, String authour) {
 //        add it to reviews list
         reviews.add(review);
 //       point the review to the restaurant
