@@ -25,8 +25,7 @@ public class RestaurantTest {
 
     @Test
     public void addReviewTest(){
-    Review llama = new Review(musashis, musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!");
-    musashis.addReview(llama);
+    musashis.addReview(new Review(musashis, "Sam I Am", musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!"));
         assertEquals(1,
                 musashis.reviews.size()
        );
@@ -34,8 +33,8 @@ public class RestaurantTest {
 
     @Test
     public void howManyStarsIsThisBusinessReallyTest(){
-        Review llama = new Review(musashis, musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!");
-        musashis.addReview(new Review(musashis,2,musashis.dollars, "Not the worst not the best"));
+        Review llama = new Review(musashis,"Sam I Am", musashis.stars, musashis.dollars, "Best sushi bowl EVER!!!");
+        musashis.addReview(new Review(musashis,"Sam I Am",2,musashis.dollars, "Not the worst not the best"));
 
     }
 

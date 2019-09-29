@@ -15,7 +15,7 @@ public class Review {
         this.dollars = dollars;
         this.review = review;
     }
-
+//  This is for businesses that are Shops
     public Review( ReviewableThings businessName, String author, double stars, String review){
         this.businessName = businessName;
         this.author = author;
@@ -23,6 +23,7 @@ public class Review {
         this.review = review;
     }
 
+//  This is for businesses that are theaters
     public Review( ReviewableThings businessName, String author, double stars, int dollars, String review, String movie){
         this.businessName = businessName;
         this.author = author;

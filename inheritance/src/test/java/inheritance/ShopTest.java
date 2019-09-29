@@ -9,13 +9,15 @@ import static org.junit.Assert.*;
 
 public class ShopTest {
     Shop target;
+
     @Before
     public void setup(){
         target = new Shop("Target", 5);
     }
+
     @Test
     public void addReview() {
-        Review llama = new Review(target, target.stars,"Best sushi bowl EVER!!!");
+        Review llama = new Review(target, "Sam I Am", target.stars,"Best sushi bowl EVER!!!");
         target.addReview(llama);
         assertEquals(1,
                 target.reviews.size()
@@ -24,8 +26,8 @@ public class ShopTest {
 
     @Test
     public void howManyStarsIsThisReviewableThingReally() {
-        Review llama = new Review(target, target.stars, "Best sushi bowl EVER!!!");
-        target.addReview(new Review(target,2, "Not the worst not the best"));
+        Review llama = new Review(target, "Sam I Am", target.stars, "Best sushi bowl EVER!!!");
+        target.addReview(new Review(target, "Sam I Am", 2, "Not the worst not the best"));
 
     }
 
